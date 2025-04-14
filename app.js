@@ -30,7 +30,11 @@ guessBtn.addEventListener('click',function(e){
     if (guess === winningNumber) {
         optimize(true);
         setMessage('YOU WIN! '+ guess + ' is correct','green')
-        pageReload();
+        
+    //....Reload page after 2 seconds
+        setTimeout(function () {
+            location.reload();
+        }, 2000);
         
     }else if(guess !== winningNumber && typeof(guess)==='number' && guess>=min && guess <= max){
         guessesLeft -=1;
@@ -45,9 +49,10 @@ guessBtn.addEventListener('click',function(e){
             setMessage('Incorrect, '+ guessesLeft+ ' guess(es) left','red')
 
         }
-        e.preventDefault();
 
     }
+    e.preventDefault();
+    
 });
 
 
