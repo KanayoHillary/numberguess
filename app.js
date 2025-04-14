@@ -41,7 +41,7 @@ guessBtn.addEventListener('click',function(e){
         if (guessesLeft === 0 ) {
             setMessage('Game over, you are out of guesses, the correct number was '+ winningNumber, 'red');
             optimize(false);
-            pageReload();
+            //pageReload();
             
         }else {
             guessInput.style.borderColor = 'red';
